@@ -35,7 +35,7 @@ app.post("/",function(req,res){
 
   };
   var jsonData=JSON.stringify(data);
-  const url="https://"+dc+".api.mailchimp.com/3.0/lists/"+list-id];
+  const url="https://"+dc+".api.mailchimp.com/3.0/lists/"+list-id;
   const options={
     method:"POST",
     auth:"priyal01:"+api-key
