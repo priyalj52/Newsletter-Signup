@@ -4,7 +4,7 @@ const express=require('express');
 const app=express();
 const bodyParser=require('body-parser');
 const request = require('request');
-const secrets = require("./secrets");
+// const secrets = require("./secrets");
 const https=require('https');
 // const { errors } = require('console');
 app.use(bodyParser.urlencoded({extended:true}));
@@ -35,10 +35,10 @@ app.post("/",function(req,res){
 
   };
   var jsonData=JSON.stringify(data);
-  const url="https://"+secrets['dc']+".api.mailchimp.com/3.0/lists/"+secrets['list-id'];
+  const url="https://"+dc+".api.mailchimp.com/3.0/lists/"+list-id];
   const options={
     method:"POST",
-    auth:"priyal01:"+secrets['api-key']
+    auth:"priyal01:"+api-key
   };
  
     const request=https.request(url,options,function(response)
