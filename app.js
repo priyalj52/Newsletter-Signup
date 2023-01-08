@@ -35,10 +35,11 @@ app.post("/",function(req,res){
 
   };
   var jsonData=JSON.stringify(data);
-  const url="https://"+{process.env.dc}+".api.mailchimp.com/3.0/lists/"+{process.env.list_id};
+//   const url="https://"+{process.env.dc}+".api.mailchimp.com/3.0/lists/"+{process.env.list_id};
+  const url=`https://${process.env.dc}.api.mailchimp.com/3.0/lists/${process.env.list_id}`;
   const options={
     method:"POST",
-    auth:"priyal01:"+{process.env.api_key}
+    auth:`priyal01:${process.env.api_key}`
   };
  
     const request=https.request(url,options,function(response)
